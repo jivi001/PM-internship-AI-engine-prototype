@@ -470,9 +470,9 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## 📞 Support
 
 ### Getting Help
-- 📧 **Email**: [Your email here]
-- 💬 **Discord**: [Your Discord server]
-- 📚 **Documentation**: [Link to full docs]
+- 📧 **Email**:jiviteshgd28@gmail.com
+- 💬 **LinkedIN**:https://www.linkedin.com/in/jivi001/
+- 📚 **Documentation**: 
 - 🐛 **Issues**: [GitHub Issues](https://github.com/jivi001/pm/issues)
 
 ### FAQ
