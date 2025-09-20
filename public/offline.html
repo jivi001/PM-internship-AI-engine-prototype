@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - PM Skills Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 500px;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .offline-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .retry-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .retry-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .features {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 0.5rem;
+            opacity: 0.8;
+        }
+
+        .feature h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature p {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">PM</div>
+        
+        <svg class="offline-icon pulse" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 7H21L19 2H5L3 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 7L5 17H19L21 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 11V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M15 11V15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        
+        <h1>You're Offline</h1>
+        <p>
+            No internet connection detected. Don't worry, you can still browse some cached content 
+            or try reconnecting when you're back online.
+        </p>
+        
+        <button class="retry-btn" onclick="window.location.reload()">
+            Try Again
+        </button>
+        
+        <div class="features">
+            <div class="feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 14C19.5523 14 20 13.5523 20 13V6C20 5.44772 19.5523 5 19 5H5C4.44772 5 4 5.44772 4 6V13C4 13.5523 4.44772 14 5 14H19Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M7 19H17" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <h3>Cached Pages</h3>
+                <p>Access recently viewed content</p>
+            </div>
+            
+            <div class="feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <h3>Fast Loading</h3>
+                <p>Optimized for speed</p>
+            </div>
+            
+            <div class="feature">
+                <svg class="feature-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <h3>PWA Ready</h3>
+                <p>Works like a native app</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-retry connection
+        let retryCount = 0;
+        const maxRetries = 3;
+        
+        function checkConnection() {
+            if (navigator.onLine) {
+                window.location.reload();
+            } else if (retryCount < maxRetries) {
+                retryCount++;
+                setTimeout(checkConnection, 5000); // Retry every 5 seconds
+            }
+        }
+        
+        // Listen for online event
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+        
+        // Start checking connection
+        setTimeout(checkConnection, 2000);
+        
+        // Service Worker messaging
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.addEventListener('message', event => {
+                if (event.data && event.data.type === 'CACHE_UPDATED') {
+                    // Show notification that cached content is available
+                    const notification = document.createElement('div');
+                    notification.style.cssText = `
+                        position: fixed;
+                        top: 20px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: rgba(34, 197, 94, 0.9);
+                        color: white;
+                        padding: 12px 24px;
+                        border-radius: 8px;
+                        backdrop-filter: blur(10px);
+                        z-index: 1000;
+                        animation: slideDown 0.3s ease-out;
+                    `;
+                    notification.textContent = 'Some content is now available offline!';
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 3000);
+                }
+            });
+        }
+        
+        // Add slide down animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideDown {
+                from {
+                    opacity: 0;
+                    transform: translateX(-50%) translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
