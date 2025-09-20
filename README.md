@@ -86,8 +86,8 @@ Git
 ### Quick Start
 ```bash
 # 1. Clone the repository
-git clone https://github.com/jivi001/pm.git
-cd pm
+git clone https://github.com/jivi001/PM-internship-AI-engine-prototype.git
+cd PM-internship-AI-engine-prototype
 
 # 2. Install dependencies
 npm install
